@@ -4,7 +4,8 @@ Identify the clusters [i.e., graphs] from a container of connections
 To use this tiny library, simply import the ``ClusterSeparation.hpp`` header. The only requirement is a c++11 compiler. In your source code, call the function ``IdentifyClusters``. This function has signature
 
 ```c++
-std::vector<Cluster> IdentifyClusters(const Container<Connection>& pairs);
+template <template <typename Type> class Container>
+Container<Cluster> IdentifyClusters(const Container<Connection>& pairs);
 ```
 
 where
